@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Music Crawler Monitor</string>
+    <string name="dashboard_title">Crawler Health &amp; Metrics</string>
+    <string name="settings_title">Gist Configuration</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
+</resources>

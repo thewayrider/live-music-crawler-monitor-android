@@ -1,0 +1,31 @@
+Categories:
+  - Multimedia
+  - Development
+License: MIT
+AuthorName: Kim Rampling
+SourceCode: https://github.com/thewayrider/live-music-search-agent
+IssueTracker: https://github.com/thewayrider/live-music-search-agent/issues
+
+AutoName: Music Crawler Monitor
+Summary: Monitor scheduled music discovery crawlers & pipeline health
+Description: |-
+  A real-time telemetry and health monitor for the Live Music Search Agent discovery crawlers.
+  Provides schedule timelines, daily/weekly/total song discovery metrics, and automated
+  diagnostics for non-performing or dormant crawlers.
+
+RepoType: git
+Repo: https://github.com/thewayrider/live-music-crawler-monitor-android.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1
