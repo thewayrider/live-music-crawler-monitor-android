@@ -88,8 +88,19 @@ fun DashboardScreen(viewModel: CrawlerViewModel) {
                             color = TextMuted
                         )
                         Spacer(modifier = Modifier.height(16.dp))
-                        Button(onClick = { viewModel.loadData() }) {
-                            Text("Retry")
+                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Button(onClick = { viewModel.loadData() }) {
+                                Text("Retry")
+                            }
+                            OutlinedButton(onClick = {
+                                viewModel.saveConfig(
+                                    viewModel.getGistId(),
+                                    viewModel.getGithubToken(),
+                                    sampleMode = true
+                                )
+                            }) {
+                                Text("Use Sample Data")
+                            }
                         }
                     }
                 }

@@ -69,6 +69,8 @@ class GistRepository(private val context: Context) {
             val contentStr = metricsFile.getString("content")
             val parsed = parseJsonToAnalytics(contentStr)
             Result.success(parsed)
+        } catch (e: java.net.UnknownHostException) {
+            Result.failure(Exception("Cannot reach the internet. Please verify your Wi-Fi or mobile data connection."))
         } catch (e: Exception) {
             Result.failure(e)
         }
