@@ -9,3 +9,8 @@
 .cxx
 local.properties
 app/build/
+
+# Signing keys
+*.keystore
+*.jks
+
